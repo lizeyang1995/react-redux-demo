@@ -69,4 +69,6 @@ const dispatchToProps = (dispatch) => {
 
 //两个括号，表示函数的返回值还是一个函数
 //第一个参数是映射store的数据到props，第二个是触发dispatch，第二个参数可以不传
+//如果我们把list当作一个单独的组件分开来，则list组件是接受方，input组件是发送方，
+//接收方只要写第一个参数就行，也就是stateToProps，发送方只要写第二个参数就行，也就是dispatchToProps，另一个参数为null
 export default connect(stateToProps, dispatchToProps)(TodoList);
